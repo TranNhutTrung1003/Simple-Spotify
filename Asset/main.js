@@ -20,6 +20,7 @@ var buttonStop = document.querySelector(".stop")
 var buttonBackward = document.querySelector(".backward")
 var buttonForward = document.querySelector(".forward")
 var songInfo = document.querySelector(".song-info")
+var songBanner = document.querySelector(".spotify-content")
 
 function formTime(seconds){
     let minutes = Math.floor(seconds / 60);
@@ -39,6 +40,7 @@ function changeSong(index){
         <img src="./Images/playing.gif" width="42" alt="" id="gif">
         ${songs[songIndex].name}
     `
+    songBanner.style.backgroundImage = `url(./covers/${songs[songIndex].imageLogo})`;
 
     buttonStop.classList.remove("fa-stop")
     buttonStop.classList.remove("fa-play")
